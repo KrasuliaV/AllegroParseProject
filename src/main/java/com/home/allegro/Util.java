@@ -52,7 +52,8 @@ public class Util {
                 sb.append("Old price: ").append(element.getElementsByClass(CROSSED_OUT_STRING.getClassName()).text()).append("; ");
                 sb.append("New price: ").append(element.getElementsByClass(RIGHT_PRICE.getClassName()).text()).append("; ");
                 sb.append("Full price with delivery: ").append(element.getElementsByClass(FULL_PRICE_WITH_DELIVERY.getClassName()).text()).append("; ");
-                sb.append("People bought: ").append(getRightStringWithNumberCustomer(element.getElementsByClass(NUMBER_CUSTOMERS.getClassName()).text())).append("\n");
+                sb.append("People bought: ").append(getRightStringWithNumberCustomer(element.getElementsByClass(NUMBER_CUSTOMERS.getClassName()).text())).append("; ");
+                sb.append("Product reference: ").append(element.getElementsByClass(REFERENCE_TO_PRODUCT_PAGE.getClassName()).attr("href")).append("\n");
                 productsWithDiscountInfoMap.put(element.getElementsByClass(PRODUCT_NAME.getClassName()).text(), sb.toString());
                 sb.setLength(0);
                 if (productsWithDiscountInfoMap.size() == 100) break;
